@@ -79,10 +79,19 @@ function getSubString(string, start, end) {
 
 
 
-
+/**
+ * Escapes special characters in a string. Prepares for RegExp use.
+ *
+ * @params {text} string - string that you want the special characters escaped
+ * @return {text} a string with all special characters escaped.
+ * 
+ * @version 1.0 (10.14.21)
+ * @author Matt Johnson <mdjhnson@gmail.com>
+ */
 function escapeRegExp(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
 }
+
 
 
 
@@ -107,6 +116,7 @@ function SStoNumColumn(name) {
   }
   return index || undefined;
 }
+
 
 
 
